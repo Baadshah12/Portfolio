@@ -52,7 +52,7 @@ const skillTiles = [
 ];
 
 export default function Skills() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('Frontend');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Frontend Development');
   const [hovered, setHovered] = useState<string | null>(null);
 
   const selectedSkills =
