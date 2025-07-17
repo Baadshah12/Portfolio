@@ -15,30 +15,21 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto text-center">
         <div className="text-4xl sm:text-6xl block bg-gradient-to-r from-purple-400 to-pink-300 drop-shadow-[0_0_2px_black] bg-clip-text text-transparent lg:text-7xl font-bold mb-6">
           <ReactTyped
-          strings={[
-            "HEYY...",
-            "I AM ABDUL MUYEEZ",
-            "FEEL FREE TO EXPLORE"
-          ]}
-          typeSpeed={150}
-          backSpeed={100}
-          loop
-        />
+            strings={["HEYY...", "I AM ABDUL MUYEEZ", "FEEL FREE TO EXPLORE"]}
+            typeSpeed={150}
+            backSpeed={100}
+            loop
+          />
         </div>
 
         <div className='text-2xl sm:text-2xl text-gray-900 dark:text-white font-bold  mb-8 max-w-2xl mx-auto'>
           <ReactTyped
-          strings={[
-            "I am a Full Stack Developer",
-            "I am an AI Enthusiast",
-            "I am a Software Engineer"
-          ]}
-          typeSpeed={150}
-          backSpeed={100}
-          loop
-        />
+            strings={["I am a Full Stack Developer", "I am an AI Enthusiast", "I am a Software Engineer"]}
+            typeSpeed={150}
+            backSpeed={100}
+            loop
+          />
         </div>
-       
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}

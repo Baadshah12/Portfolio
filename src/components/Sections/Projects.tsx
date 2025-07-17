@@ -29,7 +29,26 @@ const projects = [
     technologies: ['React', 'Tailwind CSS','Framer Motion','Three.js'],
     github: 'https://github.com/Baadshah12/portfolio',
     featured: false
+  },
+  {
+    id: 4,
+    title: 'Myntra Functional Clone With ChatBot Service',
+    description: 'A functional clone of the Myntra website with integrated ChatBot service for enhanced user interaction and support.',
+    image: 'https://www.searchenginejournal.com/wp-content/uploads/2020/03/20-free-things-you-need-to-do-after-launching-your-ecommerce-website-5e664bcb60da5-1280x720.png',
+    technologies: ['React', 'Tailwind CSS', 'ChatBot'],
+    github: 'https://github.com/Baadshah12/Myntra-With-Chatbot',
+    featured: false
+  },
+  {
+    id: 5,
+    title: 'Finance Tracker',
+    description: 'A web application for tracking personal finances. Full stack application built with React, Node.js. It allows users to manage their expenses, income, and budgets effectively.',
+    image: 'https://meta-q.cdn.bubble.io/f1713868043510x550443877844090750/image%20%2840%29.png',
+    technologies: ['React', 'Tailwind CSS', 'Node.js'],
+    github: 'https://github.com/Baadshah12/Finance-Tracker-',
+    featured: false
   }
+
 ];
 
 export default function Projects() {
