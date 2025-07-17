@@ -10,6 +10,7 @@ import Skills from './components/Sections/Skills';
 import Certifications from './components/Sections/Certifications';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Sections/Footer';
+import Experience from './components/Sections/Experience';
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
           <About />
           <Resume />
           <Projects />
+          <Experience />
           <Skills />
           <Certifications />
           <Contact />
