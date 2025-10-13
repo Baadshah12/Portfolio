@@ -57,10 +57,10 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Get In Touch
           </h2>
-          <p className="text-2xl text-gray-500 dark:text-white drop-shadow-[0_0_2px_black] font-semibold max-w-3xl mx-auto">
+          <p className="text-2xl text-white bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-semibold max-w-3xl mx-auto">
             I'm always open to discussing new opportunities and interesting projects. Let's connect!
           </p>
         </motion.div>
@@ -75,10 +75,10 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-semibold text-black mb-6">
+              <h3 className="text-3xl font-semibold text-white mb-6">
                 Let's Talk?
               </h3>
-              <p className="text-gray-500 dark:text-white  font-semibold text-xl mb-8">
+              <p className="text-white font-semibold text-xl mb-8 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl">
                 Whether you have a project in mind, want to collaborate, or just want to say hello, 
                 I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.
               </p>
@@ -93,8 +93,8 @@ export default function Contact() {
                   <Mail size={20} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-black">Email</h4>
-                  <p className="text-gray-500 dark:text-white font-medium text-lg">abdulmuyeezbaig@gmail.com</p>
+                  <h4 className="font-medium text-white">Email</h4>
+                  <p className="text-white/80 font-medium text-lg">abdulmuyeezbaig@gmail.com</p>
                 </div>
               </motion.div>
 
@@ -106,8 +106,8 @@ export default function Contact() {
                   <Phone size={20} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-black">Phone</h4>
-                  <p className="text-gray-500 dark:text-white font-medium text-lg">+91 7892187463</p>
+                  <h4 className="font-medium text-white">Phone</h4>
+                  <p className="text-white/80 font-medium text-lg">+91 7892187463</p>
                 </div>
               </motion.div>
 
@@ -119,14 +119,14 @@ export default function Contact() {
                   <MapPin size={20} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-black">Location</h4>
-                  <p className="text-gray-500 dark:text-white font-medium text-lg">Bengaluru,India</p>
+                  <h4 className="font-medium text-white">Location</h4>
+                  <p className="text-white/80 font-medium text-lg">Bengaluru,India</p>
                 </div>
               </motion.div>
             </div>
 
             <div className="pt-8">
-              <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
+              <h4 className="text-lg font-medium text-white mb-4">
                 Follow Me
               </h4>
               <div className="flex space-x-4">

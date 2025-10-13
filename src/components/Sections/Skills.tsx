@@ -71,10 +71,10 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-black  mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Skills & Expertise
           </h2>
-          <p className="text-2xl text-gray-500 dark:text-white drop-shadow-[0_0_2px_black] font-semibold max-w-3xl mx-auto">
+          <p className="text-2xl text-white bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-semibold max-w-3xl mx-auto">
             Click below to explore my stack. All skills animate into view for a smoother experience.
           </p>
         </motion.div>

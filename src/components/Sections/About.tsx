@@ -36,10 +36,10 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             About Me
           </h2>
-          <p className="text-xl drop-shadow-[0_0_2px_black] font-semibold text-gray-600 dark:text-white max-w-3xl mx-auto">
+          <p className="text-xl bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl font-semibold text-white max-w-3xl mx-auto">
             I'm a passionate developer who loves creating innovative solutions and exploring the frontiers of artificial intelligence.
           </p>
         </motion.div>
@@ -63,12 +63,12 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <p className="text-gray-900 dark:text-white  font-medium text-xl leading-relaxed">
+            <p className="text-white bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl font-medium text-xl leading-relaxed">
               With a strong foundation in both development and artificial intelligence, I create digital experiences 
               that are not only visually appealing but also highly functional and intelligent. 
               My journey in tech has been driven by curiosity and a constant desire to learn and improve.
             </p>
-            <p className="text-gray-900 dark:text-white font-medium text-xl leading-relaxed">
+            <p className="text-white font-medium text-xl leading-relaxed bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl">
               I specialize in modern web technologies including React, Node.js, and cloud platforms, while also 
               exploring the exciting world of AI and machine learning. When I'm not coding, you can find me 
               experimenting with new AI models, contributing to open-source projects, or sharing knowledge with the developer community.

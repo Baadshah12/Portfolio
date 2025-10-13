@@ -13,10 +13,10 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold  text-black mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold  text-white  mb-6">
             Experience
           </h2>
-          <p className="text-2xl text-gray-500 dark:text-white drop-shadow-[0_0_2px_black] font-semibold max-w-3xl mx-auto">
+          <p className=" bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl text-2xl text-gray-500 dark:text-white drop-shadow-[0_0_2px_black] font-semibold max-w-3xl mx-auto">
             A glimpse into my internship experience.
           </p>
         </motion.div>

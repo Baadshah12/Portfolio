@@ -22,7 +22,7 @@ function App() {
 
   return (
     <AnimatePresence>
-      <div className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-pink-900/20 transition-colors duration-300">
+      <div className="min-h-screen bg-transparent transition-colors duration-300">
         <ParticleBackground />
         <Navbar />
         

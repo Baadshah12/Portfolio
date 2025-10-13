@@ -64,10 +64,10 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold  text-black mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Featured Projects
           </h2>
-          <p className="text-2xl text-gray-500 dark:text-white drop-shadow-[0_0_2px_black] font-semibold max-w-3xl mx-auto">
+          <p className="text-2xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-semibold max-w-3xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl">
             Here are some of my recent projects that showcase my skills and passion for development.
           </p>
         </motion.div>

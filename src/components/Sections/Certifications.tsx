@@ -39,10 +39,10 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Certifications
           </h2>
-          <p className="text-2xl text-gray-500 dark:text-white drop-shadow-[0_0_2px_black] font-semibold text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-2xl text-gray-500 dark:text-white drop-shadow-[0_0_2px_black] font-semibold text-gray-600 dark:text-gray-300 max-w-3xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 px-8 py-6 rounded-xl">
             Professional certifications that validate my expertise in various technologies and methodologies.
           </p>
         </motion.div>

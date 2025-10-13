@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="text-4xl sm:text-6xl block bg-gradient-to-r from-purple-400 to-pink-300 drop-shadow-[0_0_2px_black] bg-clip-text text-transparent lg:text-7xl font-bold mb-6">
+        <div className="text-4xl sm:text-6xl block text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] lg:text-7xl font-bold mb-6" style={{ fontFamily: "'Orbitron', sans-serif" }}>
           <ReactTyped
             strings={["HEYY...", "I AM ABDUL MUYEEZ", "FEEL FREE TO EXPLORE"]}
             typeSpeed={150}
@@ -22,7 +22,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className='text-2xl sm:text-2xl text-gray-900 dark:text-white font-bold  mb-8 max-w-2xl mx-auto'>
+        <div className='text-2xl sm:text-4xl text-white font-bold mb-8 max-w-2xl mx-auto'>
           <ReactTyped
             strings={["I am a Full Stack Developer", "I am an AI Enthusiast", "I am a Software Engineer"]}
             typeSpeed={150}
@@ -35,7 +35,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-xl text-gray-600 dark:text-white mb-12 drop-shadow-[0_0_2px_black] max-w-3xl font-semibold mx-auto"
+          className="text-xl text-white mb-12 max-w-3xl font-semibold mx-auto bg-white/10 backdrop-blur-md px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-white/20"
         >
           Passionate about creating beautiful, functional, and intelligent digital experiences. 
           I bring ideas to life through code, design, and artificial intelligence.
@@ -60,7 +60,7 @@ export default function Hero() {
             href="https://drive.google.com/file/d/1z9eg5WiiA9neHkX7Ei7SLj3ATwoD3J8b/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 border-2 border-purple-500 text-purple-500 rounded-full font-medium bg-purple-500 text-white transition-colors flex items-center justify-center gap-2"
+            className="px-8 py-3 border-2 border-purple-500 bg-gradient-to-r from-purple-500 to-pink-500 text-purple-500 rounded-full font-medium  text-white transition-colors flex items-center justify-center gap-2"
             whileHover={{ scale: 1.10 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -79,7 +79,7 @@ export default function Hero() {
             href="https://www.linkedin.com/in/abdul-muyeez-104728295"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors"
+            className="p-3 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white hover:bg-purple-500 hover:text-white transition-colors"
             whileHover={{ scale: 1.1, rotate: 180 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -89,7 +89,7 @@ export default function Hero() {
             href="https://www.instagram.com/_abdul_muyeez_?igsh=MWV3ZTFjeWpseXgxeA=="
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors"
+            className="p-3 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white hover:bg-purple-500 hover:text-white transition-colors"
             whileHover={{ scale: 1.1, rotate: 180 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -99,7 +99,7 @@ export default function Hero() {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300 hover:bg-purple-500 hover:text-white transition-colors"
+            className="p-3 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white hover:bg-purple-500 hover:text-white transition-colors"
             whileHover={{ scale: 1.1, rotate: 180 }}
             whileTap={{ scale: 0.9 }}
           >

@@ -37,14 +37,12 @@ export default function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-16 "
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-black  mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white  mb-6">
             Education
           </h2>
-          <p className="text-2xl text-gray-600 dark:text-white drop-shadow-[0_0_2px_black] font-semibold max-w-3xl mx-auto">
-            My Educational background 
-          </p>
+          
         </motion.div>
 
         <div className="relative">
