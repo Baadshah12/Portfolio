@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import Moon from './Moon';
@@ -13,7 +14,9 @@ export default function MoonScene({ className }: MoonSceneProps) {
         <ambientLight intensity={0.4} />
         <directionalLight position={[5, 5, 5]} intensity={0.8} />
         <pointLight position={[-5, -5, -5]} intensity={0.3} color="#8b5cf6" />
-        <Moon />
+        <Suspense fallback={null}>
+          <Moon />
+        </Suspense>
         <OrbitControls 
           enableZoom={false} 
           enablePan={false}
