@@ -6,12 +6,12 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 export default function MoonModel() {
   const groupRef = useRef<THREE.Group>(null);
 
-  const basePath = '../../Moon/';
-  const objUrl = new URL(basePath + 'base.obj', import.meta.url).href;
-  const diffuseUrl = new URL(basePath + 'texture_diffuse.png', import.meta.url).href;
-  const normalUrl = new URL(basePath + 'texture_normal.png', import.meta.url).href;
-  const roughnessUrl = new URL(basePath + 'texture_roughness.png', import.meta.url).href;
-  const metallicUrl = new URL(basePath + 'texture_metallic.png', import.meta.url).href;
+  // Use literal URLs so Vite can statically analyze and copy these assets during build.
+  const objUrl = new URL('../../Moon/base.obj', import.meta.url).href;
+  const diffuseUrl = new URL('../../Moon/texture_diffuse.png', import.meta.url).href;
+  const normalUrl = new URL('../../Moon/texture_normal.png', import.meta.url).href;
+  const roughnessUrl = new URL('../../Moon/texture_roughness.png', import.meta.url).href;
+  const metallicUrl = new URL('../../Moon/texture_metallic.png', import.meta.url).href;
 
   const obj = useLoader(OBJLoader, objUrl);
   const [map, normalMap, roughnessMap, metalnessMap] = useLoader(THREE.TextureLoader, [

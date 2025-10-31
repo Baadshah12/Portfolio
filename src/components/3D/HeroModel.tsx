@@ -15,13 +15,14 @@ const HeroModel = forwardRef<HeroModelHandle>((_, ref) => {
     getGroup: () => groupRef.current
   }));
 
-  // asset folder was renamed to `astronaut` — point to that directory
-  const basePath = '../../astronaut/';
-  const diffuseUrl = new URL(basePath + 'texture_diffuse.png', import.meta.url).href;
-  const normalUrl = new URL(basePath + 'texture_normal.png', import.meta.url).href;
-  const roughnessUrl = new URL(basePath + 'texture_roughness.png', import.meta.url).href;
-  const metallicUrl = new URL(basePath + 'texture_metallic.png', import.meta.url).href;
-  const objUrl = new URL(basePath + 'base.obj', import.meta.url).href;
+  // Use literal URLs so Vite can statically analyze and copy these assets during build.
+  // Avoid concatenating a variable into `new URL(...)` because it prevents static analysis
+  // and can lead to runtime 404 (asset not copied to the final build).
+  const diffuseUrl = new URL('../../astronaut/texture_diffuse.png', import.meta.url).href;
+  const normalUrl = new URL('../../astronaut/texture_normal.png', import.meta.url).href;
+  const roughnessUrl = new URL('../../astronaut/texture_roughness.png', import.meta.url).href;
+  const metallicUrl = new URL('../../astronaut/texture_metallic.png', import.meta.url).href;
+  const objUrl = new URL('../../astronaut/base.obj', import.meta.url).href;
 
   const obj = useLoader(OBJLoader, objUrl);
   const [map, normalMap, roughnessMap, metalnessMap] = useLoader(THREE.TextureLoader, [
