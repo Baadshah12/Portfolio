@@ -12,8 +12,9 @@ export default function MoonScene({ className }: MoonSceneProps) {
     <div className={className}>
       <Canvas camera={{ position: [0, 0, 3], fov: 50 }}>
         <ambientLight intensity={0.4} />
-        <directionalLight position={[5, 5, 5]} intensity={0.8} />
+        <directionalLight position={[5, 5, 5]} intensity={1.0} />
         <pointLight position={[-5, -5, -5]} intensity={0.3} color="#8b5cf6" />
+        <pointLight position={[3, 3, 3]} intensity={0.5} color="#ffffff" />
         <Suspense fallback={null}>
           <Moon />
         </Suspense>

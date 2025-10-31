@@ -7,7 +7,7 @@ const experiences = [
     company: 'Reva University',
     location: 'Bengaluru,Karnataka',
     period: '2021 - 2025',
-    description: ' During the course, I studied core engineering subjects and gained hands-on experience through labs and mini-projects. I also completed key academic projects that enhanced my practical and problem-solving skills.',
+    description: 'During the course, I studied core engineering subjects and gained hands-on experience through labs and mini-projects. I also completed key academic projects that enhanced my practical and problem-solving skills. Graduated with a CGPA of 8.28/10.',
     type: 'education'
   },
   {

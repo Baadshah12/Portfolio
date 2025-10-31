@@ -11,24 +11,47 @@ export default function Moon() {
   const { colorMap, displacementMap } = useMemo(() => {
     const size = 2048;
 
+
     // Color canvas (cool silver albedo)
     const c = document.createElement('canvas');
     c.width = size;
     c.height = size;
     const cc = c.getContext('2d')!;
-    // lighter cool silver base
-    cc.fillStyle = '#e8eef2';
+
+    // cool silver base
+    cc.fillStyle = '#e9eef2';
     cc.fillRect(0, 0, size, size);
 
-    // main soft basins with lighter bluish-gray tones and increased visibility
-    for (let i = 0; i < 40; i++) {
+    // draw softer, faded maria (large subtle dark patches)
+    for (let m = 0; m < 8; m++) {
       const x = Math.random() * size;
       const y = Math.random() * size;
-      const r = (Math.random() * 0.4 + 0.05) * size;
-      // increased alpha for better visibility but not too dark
-      const alpha = Math.random() * 0.12 + 0.04;
+      const rx = (Math.random() * 0.25 + 0.08) * size;
+      const ry = rx * (0.6 + Math.random() * 0.6);
+      cc.save();
+      cc.translate(x, y);
+      cc.rotate((Math.random() - 0.5) * 0.6);
+      const grad = cc.createRadialGradient(0, 0, rx * 0.2, 0, 0, rx);
+      // lighter, lower-contrast maria
+      grad.addColorStop(0, 'rgba(110,115,120,0.45)');
+      grad.addColorStop(1, 'rgba(235,236,237,0)');
+      cc.fillStyle = grad;
+      cc.beginPath();
+      cc.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+      cc.fill();
+      cc.restore();
+    }
+
+
+    // craters (more subtle/faded)
+    for (let i = 0; i < 120; i++) {
+      const x = Math.random() * size;
+      const y = Math.random() * size;
+      const r = (Math.random() * 0.035 + 0.002) * size;
+      const alpha = Math.random() * 0.18 + 0.02; // lower alpha for faded look
       const grad = cc.createRadialGradient(x, y, 0, x, y, r);
-      grad.addColorStop(0, `rgba(100,100,110,${alpha})`); // slightly stronger, neutral-cool tone
+      grad.addColorStop(0, `rgba(100,100,105,${alpha})`);
+      grad.addColorStop(0.6, `rgba(220,220,220,${alpha * 0.3})`);
       grad.addColorStop(1, 'rgba(255,255,255,0)');
       cc.fillStyle = grad;
       cc.beginPath();
@@ -36,14 +59,14 @@ export default function Moon() {
       cc.fill();
     }
 
-    // accent spots (cooler, more visible but not dark)
-    for (let i = 0; i < 18; i++) {
+    // subtle highlights (reduced)
+    for (let i = 0; i < 30; i++) {
       const x = Math.random() * size;
       const y = Math.random() * size;
-      const r = (Math.random() * 0.12 + 0.02) * size;
-      const alpha = Math.random() * 0.14 + 0.05; // more visible accents
+      const r = (Math.random() * 0.01 + 0.002) * size;
+      const alpha = Math.random() * 0.15 + 0.03;
       const grad = cc.createRadialGradient(x, y, 0, x, y, r);
-      grad.addColorStop(0, `rgba(95,92,100,${alpha})`);
+      grad.addColorStop(0, `rgba(255,255,255,${alpha})`);
       grad.addColorStop(1, 'rgba(255,255,255,0)');
       cc.fillStyle = grad;
       cc.beginPath();
@@ -51,10 +74,10 @@ export default function Moon() {
       cc.fill();
     }
 
-    // slight cool vignette
+    // slight vignette
     const vgrad = cc.createRadialGradient(size / 2, size / 2, size * 0.05, size / 2, size / 2, size * 0.95);
     vgrad.addColorStop(0, 'rgba(255,255,255,0)');
-    vgrad.addColorStop(1, 'rgba(0,0,0,0.05)');
+    vgrad.addColorStop(1, 'rgba(0,0,0,0.06)');
     cc.fillStyle = vgrad;
     cc.fillRect(0, 0, size, size);
 
@@ -66,62 +89,51 @@ export default function Moon() {
     dc.fillStyle = 'rgb(128,128,128)';
     dc.fillRect(0, 0, size, size);
 
-    // more craters, larger and slightly deeper
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 120; i++) {
       const x = Math.random() * size;
       const y = Math.random() * size;
-      const r = (Math.random() * 0.32 + 0.05) * size;
-      const depth = Math.random() * 0.28 + 0.08; // stronger depth
+      const r = (Math.random() * 0.035 + 0.002) * size;
+      const depth = Math.random() * 0.12 + 0.02; // shallower displacement for faded craters
       const grad = dc.createRadialGradient(x, y, 0, x, y, r);
-      grad.addColorStop(0, `rgba(${Math.floor(80 - depth * 40)},${Math.floor(80 - depth * 40)},${Math.floor(80 - depth * 40)},${depth})`);
-      grad.addColorStop(0.6, `rgba(120,120,120,${depth * 0.6})`);
+      grad.addColorStop(0, `rgba(${Math.floor(128 - depth * 80)},${Math.floor(128 - depth * 80)},${Math.floor(128 - depth * 80)},${depth})`);
+      grad.addColorStop(0.6, `rgba(120,120,120,${depth * 0.5})`);
       grad.addColorStop(1, 'rgba(128,128,128,0)');
       dc.fillStyle = grad;
       dc.beginPath();
       dc.arc(x, y, r, 0, Math.PI * 2);
       dc.fill();
-
-      // rim
-      const rimR = r * (Math.random() * 0.35 + 0.55);
-      const rimGrad = dc.createRadialGradient(x, y, rimR * 0.8, x, y, rimR);
-      rimGrad.addColorStop(0, `rgba(200,200,200,${depth * 0.6})`);
-      rimGrad.addColorStop(1, 'rgba(128,128,128,0)');
-      dc.fillStyle = rimGrad;
-      dc.beginPath();
-      dc.arc(x, y, rimR, 0, Math.PI * 2);
-      dc.fill();
     }
 
     const colorMap = new THREE.CanvasTexture(c);
     colorMap.anisotropy = 8;
-    colorMap.encoding = THREE.sRGBEncoding;
+    (colorMap as any).colorSpace = THREE.SRGBColorSpace;
     colorMap.needsUpdate = true;
 
     const displacementMap = new THREE.CanvasTexture(d);
     displacementMap.anisotropy = 4;
-    displacementMap.encoding = THREE.LinearEncoding;
-    displacementMap.needsUpdate = true;
+    (displacementMap as any).colorSpace = (THREE as any).LinearSRGBColorSpace || (THREE as any).LinearSRGBColorSpace;
+  displacementMap.needsUpdate = true;
 
     return { colorMap, displacementMap };
   }, []);
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.y += 0.0005;
-      meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.1) * 0.05;
+      meshRef.current.rotation.y += 0.0008;
+      meshRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.08) * 0.03;
     }
   });
 
   return (
-    <Sphere ref={meshRef} args={[1, 256, 256]} position={[0, 0, 0]}>
+    <Sphere ref={meshRef} args={[1.05, 256, 256]} position={[0, 0, 0]}>
       <meshStandardMaterial
-        color="#e9eef2"
+        color="#dcd6d1"
         map={colorMap}
         displacementMap={displacementMap}
-        displacementScale={0.04} // slightly softer craters for lighter look
-        roughness={0.86}
-        metalness={0.10}
-        envMapIntensity={0.6}
+        displacementScale={0.03} /* reduced for subtler craters */
+        roughness={0.82}
+        metalness={0.03}
+        envMapIntensity={0.45}
       />
     </Sphere>
   );
